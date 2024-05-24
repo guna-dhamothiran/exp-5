@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Parlor Registration</title>
+    <style>
+        body {
+            background-image: url('be1.webp'); /* Specify the path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh; /* Set the height to fill the viewport */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the form */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        /* Add additional CSS styles for form elements as needed */
+    </style>
+</head>
+<body style="background-image: url('be1.webp');">
+    <h1>Beauty Parlor Registration Form</h1>
+    <form action="/register" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+        <label for="service">Service:</label><br>
+        <select id="service" name="service">
+            <option value="haircut">Haircut</option>
+            <option value="manicure">Manicure</option>
+            <option value="pedicure">Pedicure</option>
+            <option value="facial">Facial</option>
+        </select><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
